@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #000000;
+    --text-primary: #F0EDE6;
+    --text-secondary: #A59AA8;
+    --accent-lime: #C8E66B;
+    --dark-neutral: #000000;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000 !important;
+    background: #000000 !important;
+    color: var(--text-primary);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent-lime);
+    color: #000000;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #241C27;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C8E66B;
+  }
+}
+
+/* Layer 2: Oversized SHAZZAM Display Typography Behind Robot */
+.hero-poster-title {
+  font-family: var(--font-display), 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 11vw, 10.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  color: #F0EDE6;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.hero-title-minimal {
+  font-family: var(--font-display), 'Syne', sans-serif;
+  font-size: clamp(3rem, 12vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-title-minimal {
+  font-family: var(--font-display), 'Syne', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.editorial-italic {
+  font-family: var(--font-serif), 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Seamless physical sheet overlap shadow */
+.sheet-elevation {
+  box-shadow: 0 -24px 60px rgba(10, 8, 12, 0.7);
+}
